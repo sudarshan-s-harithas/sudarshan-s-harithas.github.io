@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2023-8-15
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement.
+Our work <a href="https://arxiv.org/abs/2304.01074"> FinderNet </a> is accepted at WACV2024 in the first round
