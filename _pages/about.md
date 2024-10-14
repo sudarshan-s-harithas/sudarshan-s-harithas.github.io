@@ -10,6 +10,7 @@ profile:
   image_circular: false # crops the image to make it circular
   google_scholar: https://scholar.google.com/citations?user=zsOHMdAAAAAJ
   cv: cv.pdf
+  github: https://github.com/sudarshan-s-harithas
   more_info:   >
 
 news: true # includes a list of news items
@@ -17,6 +18,9 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-I'm a second year PhD student at Brown University, supervised by Prof. Srinath Sridhar. My research focusses on developing generalist policies that enable robots to robustly operate real world. Previously, I graduated from the International Institute of Information Technology Hyderabad (IIIT-H) with an MS in Computer Science, where I worked under the supervision of Prof. K Madhava Krishna. 
+I'm a second year PhD student at [Brown University](https://cs.brown.edu/), advised by [Prof. Srinath Sridhar](https://cs.brown.edu/people/ssrinath/). Previously, I graduated from the [International Institute of Information Technology Hyderabad (IIIT-H)](https://www.iiit.ac.in/) with an MS in Computer Science, where I worked with [Prof. K Madhava Krishna](https://robotics.iiit.ac.in/). 
 
-WEBPAGE CURRENTLY BEING UPDATED
+
+My research focusses on developing methods that enable autonomous robot to accquire complex behaviours by jointly learning from humans and in-embodiment data. I am interested to develop general purpose agents to sovle a varitey of tasks and to robustly operate real world.
+
+
