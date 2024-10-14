@@ -32,9 +32,15 @@ layout: default
             cache_bust=true
           %}
         {% endif %}
+
         {% if page.profile.more_info %}
           <div class="more-info">{{ page.profile.more_info }}</div>
         {% endif %}
+
+        {% if page.profile.google_scholar %}
+          <div  <p align="center">  <b><a href="{{ page.profile.google_scholar }}">Google Scholar</a></b> <br> <b><a href="{{ page.profile.cv | prepend: 'assets/pdf/' }}">CV</a></b>  </div>
+        {% endif %}
+
       </div>
     {% endif %}
 
