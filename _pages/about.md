@@ -20,6 +20,8 @@ social: true # includes social icons at the bottom of the page
 
 
 
+
+
 I'm a second-year PhD student at [Brown University](https://cs.brown.edu/), advised by [Prof. Srinath Sridhar](https://cs.brown.edu/people/ssrinath/). Previously, I graduated from the [International Institute of Information Technology Hyderabad (IIIT-H)](https://www.iiit.ac.in/) with an MS in Computer Science, where I worked with [Prof. K Madhava Krishna](https://robotics.iiit.ac.in/). 
 
 
