@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-MotionGlot is submitted to ICRA and is under review.
+<a href="https://arxiv.org/abs/2410.16623"> MotionGlot </a> is submitted to ICRA and is under review.
