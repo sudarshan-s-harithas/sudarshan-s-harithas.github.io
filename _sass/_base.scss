@@ -1139,6 +1139,20 @@ ninja-keys {
   --ninja-z-index: 1031;
 }
 
+// News section font-size tweaks
+.news {
+  table {
+    td,
+    th {
+      font-size: 0.9rem;
+    }
+  }
+
+  .news-title {
+    font-size: 0.95rem;
+  }
+}
+
 ninja-keys::part(ninja-input) {
   color: var(--ninja-selected-text-color);
 }
