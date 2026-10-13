@@ -157,6 +157,8 @@
     {% else %}
       {% capture entrytype %}{% endcapture %}
     {% endif %}
+    {% assign entrymonth = '' %}
+    {% assign entryyear = '' %}
     {% if entry.month %}
       {% capture entrymonth %}{{ " " }}{{ entry.month | capitalize }}{% endcapture %}
     {% endif %}
@@ -174,7 +176,13 @@
       {% include hook/bib.liquid %}
     {% endif %}
     {% assign entrytype_text = entrytype | strip_html | strip %}
-    {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entryyear != "" %}, {% endif %}{{ entrymonth }}{{ entryyear }}{% endcapture %}
+    {% assign venue_numbers = entrytype_text | regex_replace: '[^0-9]', ' ' | split: ' ' %}
+    {% assign publication_year = entry.year | append: '' %}
+    {% if venue_numbers contains publication_year %}
+      {% assign entryyear = '' %}
+    {% endif %}
+    {% assign entrydate = entrymonth | append: entryyear | strip %}
+    {% capture periodical %}{{ entrytype }}{% if entrytype_text != "" and entrydate != "" %}, {% endif %}{{ entrydate }}{% endcapture %}
     <div class="periodical">
       {{ periodical | strip }}
     </div>
@@ -229,6 +237,13 @@
       {% endif %}
       {% if entry.code %}
         <a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>
+      {% endif %}
+      {% if entry.demo %}
+        {% if entry.demo contains '://' %}
+          <a href="{{ entry.demo }}" class="btn btn-sm z-depth-0" role="button">Live demo</a>
+        {% else %}
+          <a href="{{ entry.demo | relative_url }}" class="btn btn-sm z-depth-0" role="button">Live demo</a>
+        {% endif %}
       {% endif %}
       {% if entry.poster %}
         {% if entry.poster contains '://' %}

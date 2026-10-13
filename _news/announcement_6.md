@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Started a Summer Internship at <a href="https://www.generalrobotics.company/"> General Robotics </a> Excited to work on Humanoid Robots.
+Started a summer internship at <a href="https://www.generalrobotics.company/">General Robotics</a>, working on humanoid robots.
