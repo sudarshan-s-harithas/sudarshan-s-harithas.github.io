@@ -4,7 +4,7 @@
 
 title: blank # the website title (if blank, full name will be used instead)
 first_name: Sudarshan
-middle_name: 
+middle_name:
 last_name: Harithas
 email: sudarshan_harithas@brown.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
@@ -81,7 +81,7 @@ flickr_id: # your flickr id
 github_username: # your GitHub user name
 gitlab_username: # your GitLab user name
 ieee_id: # your ieeexplore.ieee.org/author/id
-inspirehep_id:  # Inspire HEP author ID
+inspirehep_id: # Inspire HEP author ID
 instagram_id: # your instagram id
 kaggle_id: # your kaggle id
 keybase_username: # your keybase user name
@@ -108,7 +108,7 @@ whatsapp_number: # your WhatsApp number (full phone number in international form
 wikidata_id: # your wikidata id
 wikipedia_id: # your wikipedia id (Case sensitive)
 work_url: # work page URL
-x_username: sudarshan_s_h  # your X handle
+x_username: sudarshan_s_h # your X handle
 youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 zotero_username: # your zotero username
 
@@ -195,7 +195,7 @@ collections:
       layout: post
     output: true
     permalink: /:collection/:title/
-    
+
   projects:
     output: true
     permalink: /:collection/:title/
@@ -294,7 +294,7 @@ sass:
 # -----------------------------------------------------------------------------
 
 jekyll-minifier:
-  exclude: ["robots.txt", "assets/js/search/*.js", "assets/libs/**/*"]
+  exclude: ["robots.txt", "assets/js/search/*.js", "assets/libs/**/*", "motionglot-demo/*.js"]
   uglifier_args:
     harmony: true
 
@@ -418,7 +418,7 @@ imagemagick:
     - ".jpeg"
     - ".png"
     - ".tiff"
-    - ".gif"
+  # Keep animated GIFs in their original format instead of converting their frames to WebP.
   output_formats:
     webp: "-quality 85"
 
