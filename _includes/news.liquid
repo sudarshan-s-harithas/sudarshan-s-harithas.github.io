@@ -14,26 +14,20 @@
         {% else %}
           {% assign news_limit = news_size %}
         {% endif %}
-        {% for item in news limit: news_limit %}
-          <tr>
-            <th scope="row" style="width: 20%">
-              {% if item.date_label %}
-                {{ item.date_label }}
-              {% else %}
-                {{ item.date | date: '%b %Y' }}
-              {% endif %}
-            </th>
-            <td>
-              {% if item.inline %}
-                {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
-              {% else %}
-                <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
-              {% endif %}
-            </td>
-          </tr>
-        {% endfor %}
+        {% include news_rows.liquid items=news limit=news_limit offset=0 %}
       </table>
     </div>
+    {% if include.limit and news_size > news_limit %}
+      {% assign older_count = news_size | minus: news_limit %}
+      <details class="older-news">
+        <summary>Older news <span class="older-news-count">({{ older_count }})</span></summary>
+        <div class="table-responsive">
+          <table class="table table-sm table-borderless">
+            {% include news_rows.liquid items=news offset=news_limit limit=news_size %}
+          </table>
+        </div>
+      </details>
+    {% endif %}
   {% else %}
     <p>No news so far...</p>
   {% endif %}

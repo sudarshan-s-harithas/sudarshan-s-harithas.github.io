@@ -21,15 +21,4 @@ social: true # includes social icons at the bottom of the page
 I'm a fourth-year Ph.D. candidate in the [Department of Computer Science](https://cs.brown.edu/) at [Brown University](https://www.brown.edu/), advised by [Prof. Srinath Sridhar](https://cs.brown.edu/people/ssrinath/). Previously, I graduated from the [International Institute of Information Technology Hyderabad (IIIT-H)](https://www.iiit.ac.in/) with an MS in Computer Science, where I worked with [Prof. K Madhava Krishna](https://robotics.iiit.ac.in/).
 
 
-Broadly, I am interested in developing general purpose robots that can actively interact with the world and perform a diverse range of tasks. Towards this goal I intend to develop cross-embodied policies that enable autonomous robots to acquire complex behaviors by jointly learning from their own experiences as well as transfer skills from multiple other embodiments. 
-
-### 🔬 Research Focus
-
-1. 🧠 **Embodiment-Agnostic Representations**  
-   Develop representations that minimize the embodiment gap, enabling seamless transfer of manipulation and loco-manipulation skills from humans to robots such as humanoids and multi-fingered dexterous hands.
-
-2. 🤖 **Cross-Embodied Action Generation**  
-   Design architectures and learning algorithms for cross-embodiment action generation, allowing skills to generalize across diverse robot morphologies.
-
-3. 📊 **Multi-Embodiment Data Infrastructure**  
-   Build scalable data-capture infrastructure for multi-embodiment action datasets. 
+My research focuses on enabling **general-purpose robots** to acquire **interaction-rich motor behaviors** for diverse tasks in the physical world. I study **generative models** and **physics-aware policy learning** to develop robust, adaptable skills across multiple embodiments. I aim to build **scalable robot learning frameworks** that integrate **perception and physical interaction dynamics** to enable **whole-body humanoid behaviors and dexterous manipulation**, allowing robots to reliably perform complex tasks in unstructured real-world environments.

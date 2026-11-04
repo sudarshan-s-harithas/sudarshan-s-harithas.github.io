@@ -168,3 +168,37 @@ html[data-theme='dark'] {
   &:hover { background: #333; }
   &:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 3px; }
 }
+
+// Give project demonstrations enough room to show robot motion clearly.
+.publications .publication-visual {
+  figure { margin: 0 0 1rem; }
+  .preview {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    box-shadow: none;
+    border: 1px solid var(--global-divider-color);
+  }
+}
+@media (max-width: 767px) {
+  .publications .publication-visual {
+    flex: 0 0 100%;
+    max-width: 100%;
+    figure, > img { max-width: 420px; margin-bottom: 1rem; }
+  }
+}
+
+.older-news {
+  margin-top: 0.75rem;
+  summary {
+    width: fit-content;
+    padding: 0.4rem 0;
+    color: var(--global-theme-color);
+    font-weight: 500;
+    cursor: pointer;
+    &:focus-visible { outline: 2px solid var(--global-theme-color); outline-offset: 3px; }
+  }
+  .older-news-count { color: var(--global-text-color-light); font-size: 0.9em; }
+  &[open] summary { margin-bottom: 0.75rem; }
+}
