@@ -43,7 +43,11 @@ module Jekyll
     end
 
     def bust_css_cache(file_name)
-      CacheDigester.new(file_name: file_name, directory: 'assets/_sass').digest!
+      # The theme partials live in _sass, not assets/_sass. Include the
+      # entrypoint too so every stylesheet change gives browsers a new URL.
+      sources = ['assets/css/main.scss'] + Dir['_sass/**/*.scss'].sort
+      digest = Digest::MD5.hexdigest(sources.map { |path| File.read(path) }.join)
+      "#{file_name}?#{digest}"
     end
   end
 end
