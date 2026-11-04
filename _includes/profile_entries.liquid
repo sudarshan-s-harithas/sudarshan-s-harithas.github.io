@@ -1,0 +1,27 @@
+<ul class="profile-entry-list">
+  {% for entry in include.entries %}
+    <li>
+      <span class="profile-entry-date">{{ entry.date }}</span>
+      <div class="profile-entry-copy">
+        <div class="profile-entry-title">
+          {% if entry.url %}
+            <a href="{{ entry.url }}">{{ entry.title }}</a>
+          {% else %}
+            <strong>{{ entry.title }}</strong>
+          {% endif %}
+          {% if entry.distinction %}
+            <span class="profile-distinction">{{ entry.distinction }}</span>
+          {% endif %}
+        </div>
+        {% if entry.description %}
+          <div class="profile-entry-description">{{ entry.description | markdownify }}</div>
+        {% endif %}
+        {% if entry.links %}
+          <div class="profile-entry-links">
+            {% for link in entry.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    </li>
+  {% endfor %}
+</ul>

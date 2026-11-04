@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="post">
+<div class="post profile-home">
   <header class="post-header">
     <h1 class="post-title">
       {% if site.title == 'blank' %}
@@ -28,7 +28,7 @@ layout: default
           {% capture sizes %}(min-width: {{site.max_width}}) {{ site.max_width | minus: 30 | times: 0.3}}px, (min-width: 576px)
       30vw, 95vw"{% endcapture %}
           {%
-            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt=page.profile.image
+            include figure.liquid loading="eager" path=profile_image_path class=profile_image_class sizes=sizes alt="Sudarshan Harithas in a research laboratory"
             cache_bust=true
           %}
         {% endif %}
@@ -48,6 +48,11 @@ layout: default
               <b>|</b> 
               <b><a href="{{ page.profile.github }}">GitHub</a></b>  
             </p>
+            {% if site.x_username %}
+              <a class="profile-x-follow" href="https://x.com/{{ site.x_username }}" target="_blank" rel="noopener noreferrer" aria-label="Follow Sudarshan on X">
+                <i class="fa-brands fa-x-twitter" aria-hidden="true"></i> Follow @{{ site.x_username }}
+              </a>
+            {% endif %}
           </div>
         {% endif %}
 
@@ -59,7 +64,7 @@ layout: default
     <!-- News -->
     {% if page.news and site.announcements.enabled %}
       <h2>
-        <a href="{{ '/news/' | relative_url }}" style="color: inherit">news</a>
+        <a href="{{ '/news/' | relative_url }}" style="color: inherit">News</a>
       </h2>
       {% include news.liquid limit=true %}
     {% endif %}
@@ -72,12 +77,36 @@ layout: default
       {% include latest_posts.liquid %}
     {% endif %}
 
+    {% if page.profile_sections %}
+      <nav class="profile-section-nav" aria-label="On this page">
+        <a href="#research">Research</a>
+        <a href="#awards">Awards</a>
+        <a href="#press">Press</a>
+        <a href="#talks">Talks</a>
+        <a href="#service">Service</a>
+      </nav>
+    {% endif %}
+
     <!-- Selected papers -->
     {% if page.selected_papers %}
-      <h2>
-        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">selected publications</a>
+      <section id="research" class="profile-panel" aria-labelledby="research-heading">
+      <h2 id="research-heading">
+        <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected publications</a>
       </h2>
+      {% if page.profile_sections %}
+        <p><a href="{{ '/publications/' | relative_url }}">View all publications &rarr;</a></p>
+      {% endif %}
       {% include selected_papers.liquid %}
+      </section>
+    {% endif %}
+
+    {% if page.profile_sections %}
+      {% include profile_sections.liquid %}
+      <script src="{{ '/assets/js/profile-sections.js' | relative_url }}" defer></script>
+    {% endif %}
+
+    {% if page.profile_sections %}
+      {% include affiliation_logos.liquid %}
     {% endif %}
 
     <!-- Social -->

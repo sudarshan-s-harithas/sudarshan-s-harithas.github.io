@@ -1,0 +1,44 @@
+awards:
+  - date: June 2025
+    title: NVIDIA Academic Grant Program
+    description: >-
+      “Large Action Models: A Cross-Embodied Model for Dexterous Manipulation.”
+      Co-written with Srinath Sridhar and Tao Lu.
+  - date: May 2025
+    title: Outstanding Reviewer, CVPR 2025
+  - date: April 2025
+    title: Doctoral Consortium, ICRA 2025
+    distinction: Oral Highlight
+  - date: 2021–2023
+    title: Research Fellowship, IIIT Hyderabad
+  - date: March 2022
+    title: IEEE RAS Travel Grant, ICRA 2022
+
+press:
+  - date: December 2025
+    title: "From ‘The Jetsons’ to reality: Brown University team works to perfect humanoid robots"
+    url: https://www.bostonglobe.com/2025/12/15/metro/ri-innovator-ai-brown-university-robot/
+    description: The Boston Globe · December 15, 2025
+  - date: May 2025
+    title: "Researchers develop AI motion ‘translation’ model for controlling different kinds of robots"
+    url: https://www.brown.edu/news/2025-05-08/robot-motion
+    description: Brown University News · May 8, 2025
+
+talks:
+  - date: October 2026
+    title: "BRACE: Adapting Whole-Body References for Force and Terrain Aware Humanoid Motion Tracking"
+    description: Invited talk · General Robotics
+    links:
+      - label: Project page
+        url: https://multiplylabs.github.io/brace/
+  - date: April 2025
+    title: "Large Action Models: Towards Building a Foundation Model for Cross-Embodied Action Generation"
+    description: Invited talk · Robotics and AI Institute (RAI)
+
+service:
+  conferences: CoRL, ICRA, IROS, CVPR, and ECCV
+  journal: IEEE Robotics and Automation Letters (RA-L)
+  admissions:
+    - date: January 2026
+      title: CS Ph.D. Application Reader
+      description: Brown University

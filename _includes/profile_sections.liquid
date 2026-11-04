@@ -1,0 +1,26 @@
+<section id="awards" class="profile-section profile-panel" aria-labelledby="awards-heading">
+  <h2 id="awards-heading">Awards and grants</h2>
+  {% include profile_entries.liquid entries=site.data.profile_sections.awards %}
+</section>
+
+<section id="press" class="profile-section profile-panel" aria-labelledby="press-heading">
+  <h2 id="press-heading">Press</h2>
+  <h3>MotionGlot</h3>
+  {% include profile_entries.liquid entries=site.data.profile_sections.press %}
+</section>
+
+<section id="talks" class="profile-section profile-panel" aria-labelledby="talks-heading">
+  <h2 id="talks-heading">Invited talks</h2>
+  {% include profile_entries.liquid entries=site.data.profile_sections.talks %}
+</section>
+
+<section id="service" class="profile-section profile-panel" aria-labelledby="service-heading">
+  <h2 id="service-heading">Service</h2>
+  <h3>Reviewing</h3>
+  <ul class="profile-service-list">
+    <li><strong>Conferences:</strong> {{ site.data.profile_sections.service.conferences }}.</li>
+    <li><strong>Journal:</strong> {{ site.data.profile_sections.service.journal }}.</li>
+  </ul>
+  <h3>Admissions</h3>
+  {% include profile_entries.liquid entries=site.data.profile_sections.service.admissions %}
+</section>

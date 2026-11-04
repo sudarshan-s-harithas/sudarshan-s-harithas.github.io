@@ -1,0 +1,73 @@
+// Modest styling for the homepage's resume-derived sections.
+.profile-section-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1.25rem;
+  margin: 1.75rem 0;
+  padding: 0;
+  border-bottom: 1px solid var(--global-divider-color);
+  font-size: 0.95rem;
+}
+.profile-section {
+  margin-top: 2.5rem;
+  h2 { margin-bottom: 1rem; }
+  h3 { margin: 1.1rem 0 0.5rem; font-size: 1.1rem; font-weight: 500; }
+}
+.profile-entry-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  > li {
+    display: grid;
+    grid-template-columns: 7.75rem minmax(0, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+.profile-entry-date {
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+  padding-top: 0.1rem;
+}
+.profile-entry-title { line-height: 1.5; }
+.profile-entry-title > a { font-weight: 500; }
+.profile-entry-description {
+  margin-top: 0.2rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  p { margin: 0; }
+}
+.profile-entry-links { margin-top: 0.3rem; font-size: 0.9rem; }
+.profile-distinction {
+  display: inline-block;
+  margin-left: 0.4rem;
+  color: var(--global-theme-color);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.profile-service-list {
+  padding-left: 1.25rem;
+  line-height: 1.7;
+}
+@media (max-width: 575px) {
+  .profile-entry-list > li { grid-template-columns: 1fr; gap: 0.15rem; }
+  .profile-distinction { margin-left: 0; }
+}
+
+.profile-section-nav a {
+  padding: 0.75rem 0.2rem;
+  border-bottom: 2px solid transparent;
+  color: var(--global-text-color);
+  text-decoration: none;
+}
+.profile-section-nav a[aria-selected="true"] {
+  color: var(--global-theme-color);
+  border-bottom-color: var(--global-theme-color);
+  font-weight: 600;
+}
+.profile-section-nav a:focus-visible {
+  outline: 2px solid var(--global-theme-color);
+  outline-offset: 3px;
+}
+.profile-panel[hidden] { display: none !important; }
+.profile-panel.profile-section { margin-top: 0; }

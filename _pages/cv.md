@@ -1,11 +1,10 @@
 ---
 layout: cv
 permalink: /cv/
-title: work experience
+title: Work Experience
 nav: true
 nav_order: 5
 cv_pdf: cv.pdf
 description:  
-toc:
-  sidebar: left
+resume_sections: [work]
 ---

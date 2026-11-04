@@ -70,6 +70,9 @@ layout: default
     <article>
       <div class="cv">
         {% for data in site.data.resume %}
+          {% if page.resume_sections %}
+            {% unless page.resume_sections contains data[0] %}{% continue %}{% endunless %}
+          {% endif %}
           {% if site.jsonresume and site.jsonresume.size > 0 %}
             {% unless site.jsonresume contains data[0] %}
               {% continue %}
